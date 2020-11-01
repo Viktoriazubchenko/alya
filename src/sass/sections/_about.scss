@@ -1,0 +1,60 @@
+
+.about {
+    padding-top: 5%;
+    background-color: $middle-bg;
+    padding-bottom: 5%;
+    &__content {
+        width: 100%;
+        margin-top: 10%;
+        height: 400px;
+        @include adaptive-height(400, 226);
+    }
+}
+.composition {
+    position: relative;
+    width: 100%;
+    height: 30%;
+}
+.about__img {
+    position: absolute;
+    width: 25%;
+    transition: all 0.5s;
+    &:hover {
+        transform: scale(1.3);
+        border: solid 1vw $transparent-purple;
+        z-index: 4;
+        img {
+            border: solid 0.5vw transparent;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+.i1 {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.i5 {
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.i3 {
+    top: 30%;
+    left: 37%;
+    z-index: 3;
+}
+.i2 {
+    top: 15%;
+    left: 18%;
+    z-index: 2;
+}
+.i4 {
+    top: 15%;
+    right: 18%;
+    z-index: 2;
+}
+ 
+    

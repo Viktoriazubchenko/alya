@@ -1,0 +1,68 @@
+.hamburger {
+    display: none;
+    background-image: $main-gradient;
+    border: 3px solid $basic-white;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20%;
+    position: relative;
+    transition: all 1s;
+    @include adaptive-height(60, 30);
+    @include adaptive-width(60, 30);
+    &:hover {
+        background-image: $opposite-gradient;
+        span {
+            width: 60%;
+        }
+    }
+    &:active {
+        span {
+            width: 0%;
+        }
+        &:before {
+            transform: rotate(45deg);
+            top: 12px;
+            left: 10%;
+         }
+        &:after {
+            transform: rotate(-45deg);
+            bottom: 12px;
+            left: 10%;
+        }
+    }
+    span {
+        width: 80%;
+        background-color: $basic-white;
+        height: 3px;
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+    &:before {
+        content: '';
+        width: 80%;
+        background-color: $basic-white;
+        height: 3px;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+    &:after {
+        content: '';
+        width: 80%;
+        background-color: $basic-white;
+        height: 3px;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+    
+}

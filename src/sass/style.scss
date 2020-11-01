@@ -1,0 +1,38 @@
+@import "elements/variables";
+@import "elements/mixins";
+@import "elements/buttons";
+@import "elements/hamburger";
+@import "elements/logos";
+@import "elements/menu";
+@import "elements/animations";
+@import "elements/titels";
+@import "sections/header";
+@import "sections/promo";
+@import "sections/details";
+@import "sections/about";
+@import "sections/features";
+@import "sections/questions";
+@import "sections/consultation";
+@import "sections/prices";
+@import "sections/contacts";
+@import "sections/footer";
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}

@@ -1,0 +1,108 @@
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    text-transform: uppercase;
+    transition: all 1s;
+    background-image: $main-gradient;
+    border: 3px solid $basic-white;
+    @include text-shadow;
+
+    &:hover {
+        background-image: $opposite-gradient;
+    }
+    img {
+        width: 50%;
+    }
+    @include adaptive-height(60, 30);
+    @include adaptive-width(60, 30);
+    &_big {
+        text-transform: uppercase;
+        width: 240px;
+        border-radius: 60px;
+        height: 60px;
+        color: $basic-white;
+        background-image: $main-gradient;
+        border: 2px solid $basic-white;
+        align-self: flex-end;
+        font-size: 16px;
+        @include adaptive-font(16, 13);
+        @include adaptive-width(240, 180);
+        @include adaptive-height(60, 40);
+        &:hover {
+            background-image: $opposite-gradient;
+        }
+        @include large-screens {
+            align-self: center;
+        }
+    }
+    &_first {
+        width: 200px;
+        text-transform: uppercase;
+        border-radius: 60px;
+        height: 60px;
+        color: $basic-white;
+        background-image: $main-gradient;
+        border: 2px solid $basic-white;
+        align-self: flex-end;
+        font-size: 16px;
+        @include text-shadow;
+        &:hover {
+            background-image: $opposite-gradient;
+        } 
+        @include adaptive-font(16, 13);
+        @include adaptive-width(200, 180);
+        @include adaptive-height(60, 40);  
+    }
+    &_menu {
+        text-transform: uppercase;
+        width: 150px;
+        border-radius: 10px;
+        height: 60px;
+        color: $basic-white;
+        background-image: $main-gradient;
+        border: 2px solid $basic-white;
+        align-self: flex-end;
+        font-size: 16px;
+        font-weight: 700;
+        @include adaptive-height(60, 30);
+        @include adaptive-font(16, 13);
+    }
+    &_shake {
+        &:hover {
+            animation: shake 0.7s;
+        }
+    }
+    &_submit {
+        text-transform: uppercase;
+        width: 200px;
+        border-radius: 60px;
+        height: 60px;
+        color: $basic-white;
+        background-image: $main-gradient;
+        border: 2px solid $basic-white;
+        margin-top: 5%;
+        font-size: 16px;
+        @include adaptive-font(16, 13);
+        @include adaptive-width(200, 180);
+        @include adaptive-height(60, 40);
+        @include small-screens {
+            align-self: center;
+        }
+    }
+    &_price {
+        text-transform: uppercase;
+        width: 200px;
+        border-radius: 60px;
+        height: 60px;
+        color: $basic-white;
+        background-image: $main-gradient;
+        border: 2px solid $basic-white;
+        margin-top: 5%;
+        font-size: 16px;
+        margin-bottom: 5%;
+        @include adaptive-font(16, 13);
+        @include adaptive-width(200, 150);
+        @include adaptive-height(60, 40);
+    }
+}
